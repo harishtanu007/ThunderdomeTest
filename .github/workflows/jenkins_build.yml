@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: triggerjenkinsjob
-        uses: ThunderdomeTest/jenkins_build@v1
+        uses: mickeygoussetorg/trigger-jenkins-job@v1
         with:
           jenkins-server:  "http://localhost:8080/" # URL of the jenkins server. ex: http://myjenkins.acme.com:8080
           jenkins-job: "ThunderdomeTestBuild" # The name of the jenkins job to run
