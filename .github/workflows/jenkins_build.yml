@@ -8,18 +8,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  checkout:
-   uses: ThunderdomeTest/.github/workflows/jenkins_build.yml@main
-   with:
-    jdk_version: 11
-  build:
-    # The type of runner that the job will run on
+  trigger-a-jenkins-job:
     runs-on: ubuntu-latest
     steps:
-    - name: trigger single Job
-      uses: actions/checkout@v2
-      with:
-        url: "http://localhost:8080"
-        job: "ThunderdomeTestBuild"
+      - id: triggerjenkinsjob
+        uses: ThunderdomeTest/jenkins_build@v1
+        with:
+          jenkins-server:  "http://localhost:8080/" # URL of the jenkins server. ex: http://myjenkins.acme.com:8080
+          jenkins-job: "ThunderdomeTestBuild" # The name of the jenkins job to run
+          jenkins-username: "harishtanu" # user name for accessing jenkins
+          jenkins-pat: "" # personal Access token for accessing Jenkins
+          poll-time: 10 # how often (seconds) to poll the jenkins server for results
+          timeout-value: 600 # How long (seconds) to poll before timing out the action
+          verbose: true # true/false - turns on extra logging
 
