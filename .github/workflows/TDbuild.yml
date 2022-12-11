@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: trigger single Job
-      uses: appleboy/jenkins-action@master
+      uses: harishtanu007/ThunderdomeTest@main
       with:
         url: "http://localhost:8080"
         job: "ThunderdomeTestBuild"
