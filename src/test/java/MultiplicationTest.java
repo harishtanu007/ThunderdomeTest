@@ -27,6 +27,6 @@ public class MultiplicationTest {
 
 		int result = startServer.multiply(8, 3);
 
-		Assert.assertEquals(21, result);
+		Assert.assertEquals(24, result);
 	}
 }
