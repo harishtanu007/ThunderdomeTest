@@ -10,7 +10,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   checkout:
-   uses: ThunderdomeTest/.github/workflows/jenkins_build.yml@main
+   uses: ThunderdomeTest/.github/workflows/jenkins_build.yml
    with:
     jdk_version: 11
   build:
