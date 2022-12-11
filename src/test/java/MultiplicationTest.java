@@ -20,4 +20,13 @@ public class MultiplicationTest {
 
 		Assert.assertEquals(21, result);
 	}
+	
+	@Test
+	public void TestMethod3() {
+		StartServer startServer = new StartServer();
+
+		int result = startServer.multiply(8, 3);
+
+		Assert.assertEquals(21, result);
+	}
 }
